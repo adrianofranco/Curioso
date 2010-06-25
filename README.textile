@@ -1,0 +1,2 @@
+h1. Curioso
+p. Curioso, Curious in english, is a Class for make scrap in html pages
