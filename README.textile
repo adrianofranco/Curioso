@@ -6,6 +6,6 @@ h2. Using
 
 h3. Simple Class
 	
-@$curioso = new Curioso();
+@$curioso = new Curioso();@
 
-$curioso->scrap("http://www.google.com", "/html/body")@
+@$curioso->scrap("http://www.google.com", "/html/body")@
