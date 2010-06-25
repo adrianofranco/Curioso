@@ -1,6 +1,6 @@
 <?php
 /**
- * Curioso component
+ * Curioso
  *
  * Busca dados de uma pagina, precisando apenas passar o Xpath
  *

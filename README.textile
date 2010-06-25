@@ -9,3 +9,11 @@ h3. Simple Class
 @$curioso = new Curioso();@
 
 @$curioso->scrap("http://www.google.com", "/html/body")@
+
+h3. Pass format
+
+	@$curioso = new Curioso();@
+	
+	@$curioso->format=object@
+	
+	@$curioso->scrap("http://www.google.com", "/html/body")@
