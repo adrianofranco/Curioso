@@ -4,8 +4,9 @@ p. Curioso, Curious in english, is a Class for make scrap in html pages
 
 h2. Using
 
-	h3. Simple Class
-	% 
+h3. Simple Class
+	
+% 
 		$curioso = new Curioso();
 		$curioso->scrap("http://www.google.com", "/html/body")
-	%
+%
