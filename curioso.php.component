@@ -48,7 +48,7 @@ class CuriosoComponent extends Object {
  * @return void
  * @access public
  */
-	function __construct() {
+	function initialize() {
 		$this->ch = curl_init();
 		curl_setopt($this->ch ,CURLOPT_CONNECTTIMEOUT,0);
 	}
@@ -117,7 +117,7 @@ class CuriosoComponent extends Object {
  * @param object $controller Instantiating controller
  * @access public
  */
-	function __destruct(&$controller) {
+	function shutdown(&$controller) {
 		curl_close($this->ch);
 	}
 }
