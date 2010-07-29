@@ -1,6 +1,6 @@
 h1. Curioso
 
-p. Curioso, Curious in english, is a Class for make scrap in html pages
+p. Curioso, Curious in english, is a Class for make scrape in html pages
 
 h2. Using
 
@@ -8,7 +8,7 @@ h3. Simple Class
 	
 @$curioso = new Curioso();@
 
-@$curioso->scrap("http://www.google.com", "/html/body")@
+@$curioso->scrape("http://www.google.com", "/html/body")@
 
 h3. Pass format
 
@@ -16,5 +16,5 @@ h3. Pass format
 	
 	@$curioso->format="object"; //can be (object | xml | array | json)@
 	
-	@$curioso->scrap("http://www.google.com", "/html/body")@
+	@$curioso->scrape("http://www.google.com", "/html/body")@
 

@@ -61,7 +61,7 @@ class Curioso{
  * @params $is_array bollean  Se true retorna dados em Array, se false returna um Objeto
  * 
  */
-	function scrap($url = "http://www.google.com.br/ig?hl=pt-BR", $xpath = '//htm/body'){
+	function scrape($url = "http://www.google.com.br/ig?hl=pt-BR", $xpath = '//htm/body'){
 		$yql = urlencode("select * from html where url=\"{$url}\" AND xpath='{$xpath}' and browser=0");
 	
 		if($this->format == "xml"):
