@@ -26,7 +26,7 @@
  * @package       duke
  * @subpackage    duke.curioso
  */
-class CuriosoComponent extends Object {
+class Curioso{
 /**
  * Criando instancia do curl
  */

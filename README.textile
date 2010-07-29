@@ -17,3 +17,4 @@ h3. Pass format
 	@$curioso->format="object"; //can be (object | xml | array | json)@
 	
 	@$curioso->scrap("http://www.google.com", "/html/body")@
+
