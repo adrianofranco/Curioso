@@ -2,65 +2,68 @@
 /**
  * Curioso
  *
- * Busca dados de uma pagina, precisando apenas passar o Xpath
+ * Curioso, in portugues is curious, is a scraper data, 
+ * using YQL, he returning data in XML, JSON, PHP Array and PHP Object
  *
  * PHP 5
  *
  * Emerson Vinicius
- * No Copyright, okay!!! ;-)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     No Copyright, okay!!! ;-)
- * @link          http://evinicius.com/projects Emerson Vinicius projects
- * @package       duke
- * @subpackage    duke.curioso
+ * @copyright     
+ * @link          http://evinicius.com/ Emerson Vinicius
+ * @package       hacks
+ * @subpackage    hacks.curioso
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 /**
- * Retorna Conteudo em JSON ou XML de alguma pagina
+ * Content Return   in JSON, XML, Array and Object of page in web
  *
  *
- * @package       duke
- * @subpackage    duke.curioso
+ * @package       hacks
+ * @subpackage    hacks.curioso
  */
 class Curioso{
-/**
- * Criando instancia do curl
- */
+	/**
+	 * curl
+ 	 */
 	var $ch;
 
-/**
- * Url do YQL
- */
+	/**
+ 	 * YQL url
+	 */
 	var $url_yql;
 
-/**
- * Formato de returno
- * Valores possiveis xml,array,json,object
- */
+	/**
+ 	 * Return format
+ 	 * Can be xml,array,json,object 
+	 * default is array
+ 	 */
 	var $format = "array"; 
-/**
- * Acordando o Curioso
- *
- * @return void
- * @access public
- */
+
+	/**
+	 * Waking the Curious
+	 *
+	 * @return void
+	 * @access public
+	 */
 	function __construct() {
 		$this->ch = curl_init();
 		curl_setopt($this->ch ,CURLOPT_CONNECTTIMEOUT,0);
 	}
 
-/**
- * Vamos curiar :D
- *
- * @params $url      string   endereço para nosso curioso ir
- * @params $xpath    string   XPath que quer buscar
- * @params $is_array bollean  Se true retorna dados em Array, se false returna um Objeto
- * 
- */
+	/**
+	 * Vamos curiar
+	 *
+	 * @params $url      string   address for curious following
+	 * @params $xpath    string   xpath for search
+	 *
+	 * @return (xml|json|array|object)
+	 * 
+	 */
 	function scrape($url = "http://www.google.com.br/ig?hl=pt-BR", $xpath = '//htm/body'){
 		$yql = urlencode("select * from html where url=\"{$url}\" AND xpath='{$xpath}' and browser=0");
 	
@@ -87,11 +90,11 @@ class Curioso{
 		endswitch;
 	}
 	
-/**
- * Curiando...
- * 
- * @return $data json
- */
+	/**
+	 * Spying...
+	 * 
+	 * @return $data (json|xml)
+	 */
 	public function espia()
 	{
 		curl_setopt($this->ch, CURLOPT_URL, $this->url_yql);
@@ -107,16 +110,13 @@ class Curioso{
 		}
 		return $data;
 	}
-	public function tratar($data)
-	{
-		return str_replace(array("\n","\r","\t"),null, $data);
-	}
-/**
- * Botando Curiso para dormir
- *
- * @param object $controller Instantiating controller
- * @access public
- */
+
+	/**
+	 * Sleeping  now
+	 *
+	 * @param object $controller Instantiating controller
+	 * @access public
+	 */
 	function __destruct(&$controller) {
 		curl_close($this->ch);
 	}
