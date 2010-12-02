@@ -14,7 +14,7 @@ h3. Pass format
 
 	@$curioso = new Curioso();@
 	
-	@$curioso->format="object"; //can be (object | xml | array | json)@
+	@$curioso->format="object"; //(object | xml | array | json)@
 	
 	@$curioso->scrape("http://www.google.com", "/html/body")@
 
