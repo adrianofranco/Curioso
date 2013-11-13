@@ -2,25 +2,25 @@
 /**
  * Curioso
  *
- * Curioso, in portugues is curious, is a scraper data, 
- * using YQL, he returning data in XML, JSON, PHP Array and PHP Object
+ * Curioso, in portugues is curious, that library is a scraper data, 
+ * using YQL to return the html data in XML, JSON, PHP Array and PHP Object
  *
  * PHP 5
  *
- * Emerson Vinicius
+ * Duke
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     
- * @link          http://evinicius.com/ Emerson Vinicius
+ * @link          http://vertigem.xxx Duke 
  * @package       hacks
  * @subpackage    hacks.curioso
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 /**
- * Content Return   in JSON, XML, Array and Object of page in web
+ * Parser HTML in JSON, XML, Array and Object of page in web
  *
  *
  * @package       hacks
