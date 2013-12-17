@@ -1,6 +1,6 @@
 h1. Curioso
 
-p. Curioso, Curious in english, is a Class for make scrape in html pages
+p. Curioso, in portugues is curious, that library is a small scraper component, using YQL to return the html data in XML, JSON, PHP Array and PHP Object
 
 h2. Using
 
