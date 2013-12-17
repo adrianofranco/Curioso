@@ -2,18 +2,18 @@
 /**
  * Curioso
  *
- * Curioso, in portugues is curious, that library is a scraper data, 
+ * Curioso, in portugues is curious, that library is a small scraper component, 
  * using YQL to return the html data in XML, JSON, PHP Array and PHP Object
  *
  * PHP 5
  *
- * Duke
+ * Duke Khaos
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     
- * @link          http://vertigem.xxx Duke 
+ * @link          http://github.com/dukex Duke 
  * @package       hacks
  * @subpackage    hacks.curioso
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -64,7 +64,7 @@ class Curioso{
 	 * @return (xml|json|array|object)
 	 * 
 	 */
-	function scrape($url = "http://www.google.com.br/ig?hl=pt-BR", $xpath = '//htm/body'){
+	function scrape($url, $xpath = '//htm/body'){
 		$yql = urlencode("select * from html where url=\"{$url}\" AND xpath='{$xpath}' and browser=0");
 	
 		if($this->format == "xml"):
